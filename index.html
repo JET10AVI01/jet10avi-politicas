@@ -1,28 +1,276 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JET10AVI | Documentos legales</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080f20">
+<meta name="description" content="JET10AVI - Tecnología, aplicaciones y soluciones digitales.">
+<title>JET10AVI | Tecnología e innovación</title>
+
+<style>
+:root {
+  --bg:#080f20;
+  --surface:#111c32;
+  --text:#f4f7ff;
+  --muted:#a5b3ca;
+  --blue:#3988ff;
+  --border:rgba(255,255,255,.09);
+}
+body.light {
+  --bg:#f3f6fc;
+  --surface:#ffffff;
+  --text:#14213a;
+  --muted:#61708a;
+  --border:rgba(0,0,0,.09);
+}
+* {box-sizing:border-box;margin:0;padding:0}
+body {
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  transition:.3s;
+}
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 8%;
+  border-bottom:1px solid var(--border);
+}
+.logo {font-size:25px;font-weight:800;letter-spacing:2px}
+.logo span {color:var(--blue)}
+.controls {display:flex;gap:10px}
+button {
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--text);
+  padding:10px 15px;
+  border-radius:9px;
+  cursor:pointer;
+  font-size:14px;
+}
+button:hover {border-color:var(--blue)}
+.hero {
+  text-align:center;
+  padding:100px 20px 85px;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(40,115,255,.23),transparent 65%);
+}
+.tag {
+  display:inline-block;
+  color:#75adff;
+  background:rgba(57,136,255,.12);
+  border:1px solid rgba(57,136,255,.25);
+  padding:7px 16px;
+  border-radius:30px;
+  font-size:13px;
+  margin-bottom:25px;
+}
+h1 {
+  font-size:clamp(38px,7vw,66px);
+  line-height:1.12;
+  margin-bottom:22px;
+}
+h1 span {color:var(--blue)}
+.hero p {
+  max-width:650px;
+  margin:auto;
+  color:var(--muted);
+  font-size:18px;
+}
+.section {
+  max-width:1050px;
+  margin:auto;
+  padding:55px 22px;
+}
+.section h2 {
+  text-align:center;
+  font-size:30px;
+  margin-bottom:12px;
+}
+.subtitle {
+  text-align:center;
+  color:var(--muted);
+  margin-bottom:38px;
+}
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.card {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:25px;
+  transition:.25s;
+}
+.card:hover {
+  transform:translateY(-5px);
+  border-color:var(--blue);
+}
+.card .icon {font-size:30px;margin-bottom:15px}
+.card h3 {font-size:18px;margin-bottom:8px}
+.card p {color:var(--muted);font-size:14px;margin-bottom:20px}
+.card a {
+  display:inline-block;
+  color:#70aaff;
+  text-decoration:none;
+  font-weight:bold;
+}
+.card a:hover {text-decoration:underline}
+.contact {
+  text-align:center;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:38px 20px;
+  margin-top:30px;
+}
+.contact p {color:var(--muted);margin:10px 0 18px}
+.contact a {color:#70aaff;text-decoration:none}
+footer {
+  border-top:1px solid var(--border);
+  text-align:center;
+  padding:28px 15px;
+  color:var(--muted);
+  font-size:13px;
+}
+@media(max-width:600px) {
+  header {padding:17px 5%}
+  .logo {font-size:20px}
+  .hero {padding:75px 20px}
+  .hero p {font-size:16px}
+}
+</style>
 </head>
+
 <body>
-  <h1>JET10AVI</h1>
-  <h2>Documentos legales</h2>
 
-  <h3>Calculadora de Préstamos</h3>
+<header>
+  <div class="logo">JET10<span>AVI</span></div>
+  <div class="controls">
+    <button onclick="toggleLanguage()" id="lang">EN</button>
+    <button onclick="toggleTheme()" id="theme">☀️</button>
+  </div>
+</header>
 
-  <h4>Política de Privacidad</h4>
-  <ul>
-    <li><a href="privacidad-es.html">Español</a></li>
-    <li><a href="privacy-en.html">English</a></li>
-  </ul>
+<main>
+<section class="hero">
+  <div class="tag" id="tag">TECNOLOGÍA E INNOVACIÓN</div>
+  <h1 id="headline">Ideas que se convierten en <span>soluciones.</span></h1>
+  <p id="intro">En JET10AVI desarrollamos aplicaciones digitales diseñadas para hacer más fáciles las tareas de todos los días.</p>
+</section>
 
-  <h4>Términos y Condiciones</h4>
-  <ul>
-    <li><a href="terminos-es.html">Español</a></li>
-    <li><a href="terms-en.html">English</a></li>
-  </ul>
+<section class="section">
+  <h2 id="appTitle">Nuestras aplicaciones</h2>
+  <p class="subtitle" id="appSubtitle">Soluciones prácticas para tu vida diaria.</p>
 
-  <p>Contacto: jet10avi.support@gmail.com</p>
+  <div class="cards">
+    <article class="card">
+      <div class="icon">🧮</div>
+      <h3 id="appName">Calculadora de Préstamos</h3>
+      <p id="appDescription">Calcula cuotas, intereses y pagos de tus préstamos de forma sencilla.</p>
+      <a href="mailto:jet10avi.support@gmail.com" id="appLink">Más información →</a>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2 id="legalTitle">Información legal</h2>
+  <p class="subtitle" id="legalSubtitle">Transparencia y confianza para nuestros usuarios.</p>
+
+  <div class="cards">
+    <article class="card">
+      <div class="icon">🔒</div>
+      <h3 id="privacyEs">Política de privacidad</h3>
+      <p id="privacyDescEs">Consulta cómo protegemos tu privacidad.</p>
+      <a href="privacidad-es.html" id="privacyLinkEs">Consultar documento →</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">📋</div>
+      <h3 id="termsEs">Términos y condiciones</h3>
+      <p id="termsDescEs">Conoce las condiciones de uso.</p>
+      <a href="terminos-es.html" id="termsLinkEs">Consultar documento →</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">🌐</div>
+      <h3 id="privacyEn">Privacy Policy</h3>
+      <p id="privacyDescEn">Learn how we protect your privacy.</p>
+      <a href="privacy-en.html">Read document →</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">📄</div>
+      <h3 id="termsEn">Terms and Conditions</h3>
+      <p id="termsDescEn">Learn about our terms of use.</p>
+      <a href="terms-en.html">Read document →</a>
+    </article>
+  </div>
+
+  <div class="contact">
+    <div class="icon">✉️</div>
+    <h2 id="contactTitle">¿Necesitas ayuda?</h2>
+    <p id="contactText">Estamos disponibles para atender tus consultas.</p>
+    <a href="mailto:jet10avi.support@gmail.com">jet10avi.support@gmail.com</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> JET10AVI. <span id="rights">Todos los derechos reservados.</span></p>
+</footer>
+
+<script>
+let english = false;
+
+function toggleTheme() {
+  document.body.classList.toggle('light');
+  document.getElementById('theme').textContent =
+    document.body.classList.contains('light') ? '🌙' : '☀️';
+}
+
+function toggleLanguage() {
+  english = !english;
+  document.documentElement.lang = english ? 'en' : 'es';
+  document.getElementById('lang').textContent = english ? 'ES' : 'EN';
+
+  const translations = {
+    tag: ['TECNOLOGÍA E INNOVACIÓN','TECHNOLOGY & INNOVATION'],
+    headline: ['Ideas que se convierten en <span>soluciones.</span>','Ideas that become <span>solutions.</span>'],
+    intro: ['En JET10AVI desarrollamos aplicaciones digitales diseñadas para hacer más fáciles las tareas de todos los días.','At JET10AVI, we develop digital applications designed to make everyday tasks easier.'],
+    appTitle: ['Nuestras aplicaciones','Our Applications'],
+    appSubtitle: ['Soluciones prácticas para tu vida diaria.','Practical solutions for everyday life.'],
+    appName: ['Calculadora de Préstamos','Loan Calculator'],
+    appDescription: ['Calcula cuotas, intereses y pagos de tus préstamos de forma sencilla.','Calculate loan payments and interest easily.'],
+    appLink: ['Más información →','More information →'],
+    legalTitle: ['Información legal','Legal Information'],
+    legalSubtitle: ['Transparencia y confianza para nuestros usuarios.','Transparency and trust for our users.'],
+    privacyEs: ['Política de privacidad','Privacy Policy'],
+    privacyDescEs: ['Consulta cómo protegemos tu privacidad.','Learn how we protect your privacy.'],
+    termsEs: ['Términos y condiciones','Terms and Conditions'],
+    termsDescEs: ['Conoce las condiciones de uso.','Learn about our terms of use.'],
+    privacyEn: ['Política de privacidad (inglés)','Privacy Policy (English)'],
+    privacyDescEn: ['Documento de privacidad en inglés.','Privacy document in English.'],
+    termsEn: ['Términos y condiciones (inglés)','Terms and Conditions (English)'],
+    termsDescEn: ['Documento legal en inglés.','Legal document in English.'],
+    contactTitle: ['¿Necesitas ayuda?','Need help?'],
+    contactText: ['Estamos disponibles para atender tus consultas.','We are available to answer your questions.'],
+    rights: ['Todos los derechos reservados.','All rights reserved.']
+  };
+
+  for (const id in translations) {
+    document.getElementById(id).innerHTML = translations[id][english ? 1 : 0];
+  }
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
